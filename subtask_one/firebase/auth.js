@@ -1,11 +1,11 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyBb6UPMyUZMZNQ1W0ngdKjUPhFKS4HOykY",
-  authDomain: "firstproject-aedd3.firebaseapp.com",
-  databaseURL: "https://firstproject-aedd3-default-rtdb.firebaseio.com",
-  projectId: "firstproject-aedd3",
-  storageBucket: "firstproject-aedd3.appspot.com",
-  messagingSenderId: "201020881386",
-  appId: "1:201020881386:web:09dd2b30b85849ae061a93",
+  apiKey: "AIzaSyCrzUdoGfJyUcEO8IACzJgEfDeTkCeXwoQ",
+  authDomain: "antariks.firebaseapp.com",
+  databaseURL: "https://antariks-default-rtdb.firebaseio.com",
+  projectId: "antariks",
+  storageBucket: "antariks.appspot.com",
+  messagingSenderId: "723830306989",
+  appId: "1:723830306989:web:1eb91b6484578605096e24"
 };
 
 // Initialize Firebase
@@ -23,7 +23,7 @@ function handleAuthStateChange(user) {
     redirectToSignup();
   } else {
     const userEmailElement = document.getElementById('userEmail');
-    userEmailElement.innerText = 'Welcome, ' + user.email;
+    if(user) userEmailElement.innerText = 'Welcome, ' + user.email;
   }
 }
 
@@ -104,4 +104,7 @@ function redirectToSignup() {
 function displayErrorMessage(message) {
   const div = document.getElementById("alertBox");
   div.innerHTML = `<div class="alert alert-danger" role="alert" aria-hidden="true">${message}</div>`;
+  setTimeout(() => {
+    div.innerHTML = "";
+  }, 2000);
 }
