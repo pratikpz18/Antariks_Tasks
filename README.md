@@ -24,3 +24,10 @@ Because we added the oauth check the home.html page will be only accessible for 
     }
   }
 }
+
+SubTask 2 - Create a simple nodejs server which exposes two endpoints for GET and POST data
+
+1. used `fetch` to make request as i don't want to install any other library like axios because fetch is availble directly in js
+2. Can add a db support like sqlite
+3. store all the helpers functions into separate helper file and import for all the tasks
+4. can add a get button to show data by storing it in mysqlite or localStorage (webmethods) etc.
